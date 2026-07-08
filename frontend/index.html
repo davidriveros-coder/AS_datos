@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>América Solidaria · Destino</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="brand-header">
+    <img
+      src="assets/logo-header.png"
+      alt="América Solidaria · Destino"
+      class="brand-header__logo-img"
+      id="headerLogo"
+    />
+  </header>
+
+  <main class="container">
+
+    <!-- ===================== PANTALLA 1: FORMULARIO ===================== -->
+    <section id="formSection" class="card">
+      <h1 class="title">Gracias por participar con nosotros</h1>
+      <p class="subtitle">Regístrate aquí para ver nuestro collage de la actividad.</p>
+
+      <form id="registroForm" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+        </div>
+
+        <div class="field">
+          <label for="mail">Mail</label>
+          <input type="email" id="mail" name="mail" placeholder="tucorreo@ejemplo.com" required />
+        </div>
+
+        <div class="field">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" required />
+        </div>
+
+        <div class="field">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+        </div>
+
+        <!-- honeypot anti-spam -->
+        <input type="text" id="website" name="website" class="honeypot" tabindex="-1" autocomplete="off" />
+
+        <button type="submit" id="submitBtn" class="btn btn--primary">Enviar</button>
+
+        <p id="formError" class="form-error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <!-- ===================== PANTALLA 2: AGRADECIMIENTO ===================== -->
+    <section id="thanksSection" class="card card--thanks" hidden>
+      <img
+        src="assets/estrella.png"
+        alt="Estrella América Solidaria"
+        class="hero-star-img"
+        id="heroStar"
+      />
+
+      <h2 class="title title--thanks">¡Registro exitoso!</h2>
+      <p class="subtitle">Muy pronto vas a ver el collage de la actividad.</p>
+
+      <a
+        id="destinoBtn"
+        class="btn btn--destino"
+        href="https://www.americasolidaria.cl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Sé parte del Destino de los jóvenes
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>América Solidaria · Destino</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
